@@ -1,7 +1,7 @@
 {
   "name": "search-around-date",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Get previous and next posts based on Tweet",
   "scripts": {
     "start": "npm run dev:chrome",
