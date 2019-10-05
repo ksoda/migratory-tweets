@@ -5,37 +5,22 @@
   "version": "0.0.0",
   "manifest_version": 2,
   "default_locale": "en",
-  "icons": {
-    "16": "images/icon-16.png",
-    "128": "images/icon-128.png"
-  },
+  "icons": {},
   "background": {
-    "scripts": [
-      "scripts/background.js"
-    ]
+    "scripts": ["scripts/background.js"]
   },
   "page_action": {
-    "default_icon": {
-      "19": "images/icon-19.png",
-      "38": "images/icon-38.png"
-    },
+    "default_icon": {},
     "default_title": "__MSG_browserActionTitle__",
     "default_popup": "pages/popup.html"
   },
   "content_scripts": [
     {
-      "matches": [
-        "http://*/*",
-        "https://*/*"
-      ],
-      "css": [
-        "styles/contentscript.css"
-      ],
-      "js": [
-        "scripts/contentscript.js"
-      ],
+      "matches": ["https://twitter.com/*"],
+      "js": ["scripts/contentscript.js"],
       "run_at": "document_end",
       "all_frames": false
     }
-  ]
+  ],
+  "permissions": ["tabs", "https://twitter.com/*"]
 }
